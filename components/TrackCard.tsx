@@ -4,7 +4,6 @@ import { useSearchArtist } from "../customHooks/useSearchArtist";
 import useGetArtistTrackQuery from "../pages/api/useGetArtistTrack";
 import Link from "next/link";
 import { useSelectedArtistDetails } from "../customHooks/useSelectedArtist";
-import { Artist } from "../types";
 import { convertToHour } from "./utils";
 /**
  *
