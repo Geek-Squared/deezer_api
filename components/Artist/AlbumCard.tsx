@@ -21,10 +21,16 @@ const AlbumCard = () => {
   const { selectedCard } = useSelectedArtistDetails();
   const { data } = useGetArtistDetailsQuery(selectedCard?.artist.id);
 
+  if (!data) {
+    <Typography variant="h6" sx={{ marginBottom: "7px" }}>
+      No Albums
+    </Typography>;
+  }
+
   return (
     <div
       style={{
-        marginTop: "60px",
+        marginTop: "50px",
         width: "50%",
         margin: "auto",
       }}

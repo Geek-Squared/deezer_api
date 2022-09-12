@@ -39,7 +39,7 @@ const TrackCard = () => {
     >
       {artists?.map((artist: Artist) => (
         <Grid item xs={12} sm={4} md={4} key={artist?.id}>
-          <Link href={`/artist`}>
+          <Link href={"/artist"}>
             <div>
               <Card
                 sx={{ width: "100%", cursor: "pointer" }}
