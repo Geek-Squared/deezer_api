@@ -5,6 +5,21 @@ import useGetArtistTrackQuery from "../pages/api/useGetArtistTrack";
 import Link from "next/link";
 import { useSelectedArtistDetails } from "../customHooks/useSelectedArtist";
 import { convertToHour } from "./utils";
+
+type Artist = {
+  id: number;
+  title: string;
+  album: {
+    cover_big: string;
+    cover_medium: string;
+    title: string;
+  };
+  duration: number;
+  artist: {
+    name: string;
+  };
+};
+
 /**
  *
  * @returns Track Details
