@@ -1,4 +1,3 @@
-
 /**
  * This context is used to share the selected artist between the search page and the artist page
  */

@@ -2,7 +2,20 @@ import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
 import { useSelectedArtistDetails } from "../../customHooks/useSelectedArtist";
 import useGetArtistDetailsQuery from "../../pages/api/useGetArtistDetails";
-import { Artist } from "../../types";
+
+type Artist = {
+  id: number;
+  title: string;
+  album: {
+    cover_big: string;
+    cover_medium: string;
+    title: string;
+  };
+  duration: number;
+  artist: {
+    name: string;
+  };
+};
 
 const AlbumCard = () => {
   const { selectedCard } = useSelectedArtistDetails();

@@ -20,17 +20,24 @@ const TopTracks = () => {
       </Typography>
       {data?.data?.map((item: { title: string; duration: number }) => (
         <>
-          <Grid container spacing={3} columns={3} sx={{
-            marginTop: "5px",
-            marginBottom: "10px",
-          }}>
+          <Grid
+            container
+            spacing={3}
+            columns={3}
+            sx={{
+              marginTop: "5px",
+              marginBottom: "10px",
+            }}
+          >
             <Grid item>
               <Typography variant="body2">
                 {data?.data?.indexOf(item) + 1}
               </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="caption" color="#808080">{item?.title}</Typography>
+              <Typography variant="caption" color="#808080">
+                {item?.title}
+              </Typography>
             </Grid>
             <Grid
               item
