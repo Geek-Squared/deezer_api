@@ -2,7 +2,7 @@ import React from "react";
 import ArtistView from "../components/Artist/ArtistView";
 import { useSelectedArtistDetails } from "../customHooks/useSelectedArtist";
 
-const artist = () => {
+const Artist = () => {
   const { selectedCard } = useSelectedArtistDetails();
   return (
     <div
@@ -15,4 +15,4 @@ const artist = () => {
   );
 };
 
-export default artist;
+export default Artist;

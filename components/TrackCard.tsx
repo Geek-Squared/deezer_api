@@ -16,13 +16,6 @@ const TrackCard = () => {
   const { data } = useGetArtistTrackQuery(selectedArtist);
   const artists = data?.data;
 
-  if (!artists) {
-    <img
-      src={"https://download.logo.wine/logo/Deezer/Deezer-Logo.wine.png"}
-      alt="Loading Data..."
-    />;
-  }
-
   return (
     <Grid
       container

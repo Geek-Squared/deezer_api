@@ -21,8 +21,8 @@ const AlbumCard = () => {
       </Typography>
       <Grid container spacing={{ xs: 2, md: 1 }}>
         {data?.tracks?.data?.slice(0, 4).map((item: Artist) => (
-          <Grid item xs={12} sm={12} md={3}>
-            <Card sx={{ marginTop: "10px" }} key={"artist?.id"}>
+          <Grid item xs={12} sm={12} md={3} key={item?.id}>
+            <Card sx={{ marginTop: "10px" }}>
               <CardMedia
                 component="img"
                 height="194"
