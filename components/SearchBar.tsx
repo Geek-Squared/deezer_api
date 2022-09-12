@@ -26,7 +26,16 @@ const SearchBar = () => {
         style={{
           margin: "0 auto",
           width: 600,
+          color: "white",
+
         }}
+        InputProps={{
+          style: {
+            color: "white",
+           
+          }
+        }}
+       
       />
     </div>
   );

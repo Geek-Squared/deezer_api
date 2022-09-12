@@ -14,6 +14,7 @@ const TopBar = () => {
           position="static"
           style={{
             backgroundColor: "#05386B",
+            width: "100%",
           }}
         >
           <Toolbar>

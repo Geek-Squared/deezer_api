@@ -14,6 +14,8 @@ const ArtistView: FC<IPropsArtistView> = ({ artistData }) => {
         <div
           style={{
             display: "flex",
+            // if screen size is less than 600px, then display flex direction column
+            flexDirection: window.innerWidth < 600 ? "column" : "row",
           }}
         >
           <CardContent
@@ -23,7 +25,7 @@ const ArtistView: FC<IPropsArtistView> = ({ artistData }) => {
           >
             <div
               style={{
-                position: "relative",
+                position: "relative"
               }}
             >
               <CardMedia
