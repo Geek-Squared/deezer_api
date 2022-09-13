@@ -1,5 +1,11 @@
 import React, { FC } from "react";
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import AlbumCard from "./AlbumCard";
 import TopTracks from "./TopTracks";
 
@@ -8,14 +14,15 @@ interface IPropsArtistView {
 }
 
 const ArtistView: FC<IPropsArtistView> = ({ artistData }) => {
+  const theme = useMediaQuery("(max-width: 600px)");
   return (
     <div style={{ marginTop: "30px", width: "95%", margin: "auto" }}>
       <Card>
         <div
           style={{
             display: "flex",
-            // if screen size is less than 600px, then display flex direction column
-            flexDirection: window.innerWidth < 600 ? "column" : "row",
+
+            flexDirection: theme ? "column" : "row",
           }}
         >
           <CardContent
@@ -25,7 +32,7 @@ const ArtistView: FC<IPropsArtistView> = ({ artistData }) => {
           >
             <div
               style={{
-                position: "relative"
+                position: "relative",
               }}
             >
               <CardMedia
